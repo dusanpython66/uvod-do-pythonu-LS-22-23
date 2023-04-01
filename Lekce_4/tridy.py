@@ -2,6 +2,7 @@
 class MojePrvniTrida:
     pass    # třída je prázdná  - nic nedělá
 
+
 # vytvořme instanci třídy MojePrvniTrida
 oMojePrvniTrida = MojePrvniTrida()
 

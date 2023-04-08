@@ -1,6 +1,14 @@
 from time import time, sleep
 
 
+
+
+
+
+
+
+
+
 def f():
     sleep(0.3)
 
@@ -12,6 +20,13 @@ def g():
 t = time()  # zjistíme aktuální čas
 f()  # zavoláme funkci f
 print("f took", time() - t)  # zjistíme, kolik času trvalo zavolání funkce f
+
+
+
+
+
+
+
 
 
 # dekorátor je funkce, která přijímá funkci jako argument a vrací funkci
@@ -29,14 +44,6 @@ def dekorator(funkce):
     return vnitrek  # vracíme funkci vnitrek
 
 
-# q: co se stane, když vracíme funkci vnitrek()?
-# a: vracíme ji jako hodnotu, ne jako volání funkce
-#   tedy vracíme objekt funkce, nikoliv její výsledek
-# q: co je smyslem vracet funkci vnitrek()?
-# a: vracíme ji jako hodnotu, ne jako volání funkce
-# q: lze napsat dekorátor bez vnitřní funkce vnitrek()?
-# a: ano, lze, ale pak se dekorátor používá jinak
-#   viz. https://www.python.org/dev/peps/pep-0318/
 
 # dekorovaná funkce
 @dekorator
@@ -140,3 +147,54 @@ def f(sleep_time=0.1):
 f(0.2)
 f(sleep_time=0.3)  # použijeme pojmenovaný argument
 print("f.__name__:", f.__name__)  # vypíše se wrapper!
+
+
+########### syntaxe s použitím znaku @ ###########
+
+# importujme funkce sleep a time z modulu time
+from time import sleep, time
+from functools import wraps  # importujeme funkci wraps  z modulu functools
+
+
+def measure(funkce):  # dekorátor measure
+    @wraps(
+        funkce
+    )  # použijeme funkci wraps, která zajišťuje, že se zachová název a dokumentace dekorované funkce
+    def wrapper(*args, **kwargs):  # vnitřní funkce wrapper
+        t = time()
+        vysledek = funkce(*args, **kwargs)
+        print(
+            "funkce", funkce.__name__, "took", time() - t
+        )  # vypíše se název dekorované funkce
+        return vysledek
+
+    return wrapper
+
+
+def max_result(funkce):
+    @wraps(
+        funkce
+    )  # použijeme funkci wraps, která zajišťuje, že se zachová název a dokumentace dekorované funkce
+    def wrapper(*args, **kwargs):
+        vysledek = funkce(*args, **kwargs)
+        if vysledek > 100:
+            print(f"Výsledek {vysledek} je větší než 100. 'Maximum je 100.'")
+        return vysledek
+
+    return wrapper
+
+
+@measure
+@max_result
+def cube(n):
+    """Vrátí třetí mocninu čísla n."""
+    return n**3
+
+
+print(cube(2))
+print(cube(5))
+print(cube.__name__, cube.__doc__)  # vypíše se název dekorované funkce
+# q: __doc__ je atribut funkce, který 
+# obsahuje dokumentaci funkce
+
+

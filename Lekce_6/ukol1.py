@@ -23,7 +23,7 @@ class Auto:
 
 
 """
-Úkol 4: Vytvoř třídu ElektrickeAuto, která dědí od třídy Auto
+Úkol (b): Vytvoř třídu ElektrickeAuto, která dědí od třídy Auto
 
 1. Vytvoř třídu ElektrickeAuto, která dědí od třídy Auto.
 2. Přidej atribut kapacita_baterie pro třídu ElektrickeAuto.

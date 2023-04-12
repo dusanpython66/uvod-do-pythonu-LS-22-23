@@ -4,8 +4,10 @@
 
 # nejdrive importujme modul dedicnost.py a z něj
 # třídy Auto, ZavodniAuto, F1Auto
-from dedicnost import Auto, ZavodniAuto, F1Auto
+import sys  
+sys.path.append("../Lekce_5")
 
+from dedicnost import Auto, ZavodniAuto, F1Auto   
 oAuto = Auto()
 oZavodniAuto = ZavodniAuto()
 oF1Auto = F1Auto()
@@ -39,5 +41,30 @@ for auto, nazev in auta:
 # zda je objekt objekt_ instance třídy trida_.
 
 
-# Path: Lekce_6\issubclass_isinstance.py
+# Nyní ještě prověříme dědičnost tříd pomocí funkce issubclass()
+for trida_1 in tridy_aut:
+    for trida_2 in tridy_aut:
+        belongs = issubclass(trida_1, trida_2)
+        msg = "je" if belongs else "není"
+        print(f"{trida_1.__name__} {msg} potomek třídy {trida_2.__name__}")
+
+# Výstup:
+# Auto je potomek třídy Auto
+# Auto není potomek třídy ZavodniAuto
+# Auto není potomek třídy F1Auto
+# ZavodniAuto je potomek třídy Auto
+# ZavodniAuto je potomek třídy ZavodniAuto
+# ZavodniAuto není potomek třídy F1Auto
+# F1Auto je potomek třídy Auto
+# F1Auto je potomek třídy ZavodniAuto
+# F1Auto je potomek třídy F1Auto
+
+
+# Výstup je stejný, jako v případě předchozího příkladu, ale tentokrát
+# používáme funkci issubclass().
+# Funkce issubclass() zjistí, zda je třída trida_1 potomkem třídy trida_2.
+
+# __name__ je atribut třídy, který obsahuje název třídy.  V případě
+# třídy Auto je to "Auto", v případě třídy ZavodniAuto je to
+# "ZavodniAuto" a v případě třídy F1Auto je to "F1Auto".
 

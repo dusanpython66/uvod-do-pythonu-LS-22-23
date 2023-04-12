@@ -4,6 +4,22 @@
 # Třídové atributy jsou přístupné přes objekt třídy.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Osoba:
     # Třídový atribut.
     # Třídové atributy jsou sdílené všemi instancemi třídy.
@@ -22,5 +38,15 @@ oOsoba = Osoba("Pepa", "Novák")
 print(oOsoba.__dict__)
 
 # Zobrazme třídový atribut druh.
-print(oOsoba.druh)
+print(oOsoba.druh)   # objekt oOsoba použije svůj atribut druh
+print(Osoba.druh)  # třída Osoba použije svůj atribut druh
+
+# vytvořme další instanci třídy Osoba
+oOsoba2 = Osoba("Jana", "Nováková")
+
+# Zobrazme atributy objektu oOsoba2.
+print(oOsoba2.__dict__)
+
+# Zobrazme třídový atribut druh.
+print(oOsoba2.druh)   # objekt oOsoba2 použije svůj atribut druh
 

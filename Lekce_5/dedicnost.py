@@ -5,6 +5,22 @@
 #  a může je přepsat
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Třída Motor  (třída, ze které se dědí)
 # - atributy a metody, které mají všechny motory
 class Motor:

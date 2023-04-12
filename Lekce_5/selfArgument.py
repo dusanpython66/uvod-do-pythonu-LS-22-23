@@ -5,7 +5,20 @@ class Square:
         return self.strana * self.strana
     def obvod(self):
         return self.strana * 4
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Vytvoříme objekt:
 ctverec = Square()
 # Zavoláme metodu .obsah():
@@ -22,7 +35,7 @@ print(Square.obvod(ctverec))   # musíme předat objekt jako argument
 
 ctverec.strana = 10  # změníme hodnotu atributu strana
 print(ctverec.obsah())   # zavoláme metodu obsah() znovu
-
+print(Square.strana)
 
 # Ukažme ještě jeden šikovný příklad:
 class Cena:

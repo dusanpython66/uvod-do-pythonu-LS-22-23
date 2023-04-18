@@ -28,3 +28,6 @@ Základní metody a operace se slovníky
 7. Objektově orientované programování (OOP) v Pythonu
 Třídy, objekty, atributy a metody
 Konstruktor, dědičnost
+
+Odkaz na cvičný test v Moodlu:
+https://kurzy.uhk.cz/mod/quiz/view.php?id=91674

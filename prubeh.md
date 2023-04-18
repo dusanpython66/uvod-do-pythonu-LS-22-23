@@ -17,4 +17,6 @@
 **Osnova lekce:**
 - Vyřešíme dva samostatné úkoly (ukol1.py)
 - Vysvětlíme si význam a použití funkce isinstance a issubclass 
+- Přístup k základní třídě (base class), použití funkce super() (baseClass.py)
+- Mnohonásobná dědičnost (multipleInheritance.py)
 

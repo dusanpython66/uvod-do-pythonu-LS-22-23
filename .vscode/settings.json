@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
         "./Lekce_5"
-    ]
+    ],
+    "python.formatting.provider": "autopep8"
 }

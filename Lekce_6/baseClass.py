@@ -32,7 +32,7 @@ class Kniha:
 
 class EKniha(Kniha):
     def __init__(self, nazev, autor, rok_vydani, format_):
-        Kniha.__init__(self, nazev, autor, rok_vydani)
+        Kniha.__init__(self, nazev, autor, rok_vydani)   # voláme metodu init() třídy Kniha
         self.format_ = format_
 
 oEKniha = EKniha("Python", "Guido van Rossum", 1991, "pdf")
@@ -62,5 +62,14 @@ class Kniha:
 
 class EKniha(Kniha):
     def __init__(self, nazev, autor, rok_vydani, format_):
-        super().__init__(nazev, autor, rok_vydani)
+        super().__init__(nazev, autor, rok_vydani)    # super() je zkratka pro Kniha
         self.format_ = format_
+
+
+# vytvořme instanci třídy EKniha
+oEKniha = EKniha("Python", "Guido van Rossum", 1991, "pdf")
+print("-----------------")
+print(oEKniha.nazev)
+print(oEKniha.autor)
+print(oEKniha.rok_vydani)
+print(oEKniha.format_)

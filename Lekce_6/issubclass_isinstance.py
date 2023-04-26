@@ -8,6 +8,7 @@ import sys
 sys.path.append("../Lekce_5")
 
 from dedicnost import Auto, ZavodniAuto, F1Auto   
+
 oAuto = Auto()
 oZavodniAuto = ZavodniAuto()
 oF1Auto = F1Auto()

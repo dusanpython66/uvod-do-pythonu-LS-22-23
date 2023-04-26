@@ -20,3 +20,13 @@
 - Přístup k základní třídě (base class), použití funkce super() (baseClass.py)
 - Mnohonásobná dědičnost (multipleInheritance.py)
 
+# 26.4. (Lekce7)
+**Osnova lekce:**
+- Statické metody (statickeMetody.py)
+- Třídové metody (tridoveMetody.py)
+- Kombinování třídových a statických metod (tridniStatickeMetodyKombinace.py)
+- Privatní atributy a metody (privatniAtributy.py)
+
+# 3.5. (Lekce8)
+- Polymorfismus (polymorfismus.py)
+- 

@@ -22,11 +22,15 @@ class StringUtil:
     def get_unique_words(sentence):
         return set(sentence.split())
 
-
+# V následujícím příkladu si ukážeme, jak se musí změnit kód, pokud
+# bychom změnili jméno třídy StringUtil na StringUtil_1 a pokud bychom 
+# definovali metodu is_palindrome() jako statickou metodu.
+# Odkaz na třídu, kde se nachází metody, které voláme v této třídě,
+# získáme pomocí proměnné __class__.
 class StringUtil_1:
     @staticmethod
     def is_palindrome(s, case_sensitive=True):
-        s = __class__._strip_string(s)
+        s = __class__._strip_string(s)   # __class__ je odkaz na třídu, ve které se nacházíme
         # je-li case_sensitive True, tak nastavíme s na malá písmena (lowercase)
         if not case_sensitive:
             s = s.lower()

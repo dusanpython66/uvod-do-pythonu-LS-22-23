@@ -24,7 +24,7 @@ print(pow(2, 10))
 
 print(type(3.14))  # pythonovský typ je "float"
 print(type(round(3.14)))  # funkce "round" zaokrouhlí číslo na celé číslo
-from math import pi
+from math import pi  # importujeme z modulu "math" konstantu "pi"
 print(pi)
 
 ########## boolovské hodnoty ############

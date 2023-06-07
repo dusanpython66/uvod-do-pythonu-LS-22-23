@@ -22,14 +22,14 @@ print(pow(2, 10))
 
 ########## Desetinná čísla ##############
 
-print(type(3.14))
-print(type(round(3.14)))
+print(type(3.14))  # pythonovský typ je "float"
+print(type(round(3.14)))  # funkce "round" zaokrouhlí číslo na celé číslo
 from math import pi
 print(pi)
 
 ########## boolovské hodnoty ############
 # True, False
-print(1 < 2)
+print(1 < 2)  
 print(1 >= 5)
 print(1 == 2)  # relační operátor rovnosti
 print(1 <= 2)

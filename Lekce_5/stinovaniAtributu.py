@@ -5,21 +5,6 @@
 # použije atribut objektu a třídový atribut se při přístupu
 # k němu ignoruje.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Bod:
     x = 10
     y = 7

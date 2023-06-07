@@ -1,3 +1,16 @@
+# Lekce 1
+**Osnova lekce:**
+- Úvod do kurzu
+- Instalace Pythonu
+- Editace kódu (editory, IDE)
+- První program v Pythonu
+- Práce v interaktivním režimu (Python interactive shell)
+- Seznámení s Jupyter Notebookem
+- Organizace kódu v Pythonu (moduly, balíčky, knihovny, frameworky)
+
+# Lekce 2
+**Osnova lekce:**
+
 # 5.4. (Lekce4, Lekce5)
 **Osnova lekce:**
 - Nejjednodušší třída bez atributů a metod (nejjednodussiTrida.py)
@@ -29,4 +42,4 @@
 
 # 3.5. (Lekce8)
 - Polymorfismus (polymorfismus.py)
-- 
+- Dekorátor @property (property.py)

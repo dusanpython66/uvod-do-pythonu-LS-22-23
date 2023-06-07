@@ -74,7 +74,7 @@ len("Ahoj bcbcbcbcbcbcbcbcbcbcbcb") # funkce "len" nám vrátí počet znaků ř
 # Funkce pro práci s řetězci:
 len("Ahoj")  # délka řetězce
 
-upper("karel")
+# upper("karel")
 "karel".upper()
 "Karel".lower()
 

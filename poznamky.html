@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="cs-Cz">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Git a Github</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/poznamky.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            Užití Gitu a Githubu
+        </h1>
+
+    </header>
+    <main>
+
+        <section id="VSC shortcuts">
+            <h2>VSC-klávesové zkratky</h2>
+            <ul>
+                <li>
+                    <strong>Posouvání bloku textu:</strong>
+                    Alt + šipky nahoru a dolů
+                </li>
+                <li><strong>Boilerplate shortcut</strong>: Shift+!+tab</li>
+                <li>
+                    <strong>Zakomentování bloku:</strong>
+                    Shift+Alt+A
+                </li>
+                <li>
+                    <strong>Formátování dokumentu pomocí extension prettier-code formatter:
+                    </strong>
+                    Shift+Alt+F
+                </li>
+            </ul>
+        </section>
+
+        <section id="Git-Github">
+            <h2>Git a Github</h2>
+            <article id="Git">
+                <h3>Git</h3>
+                <h4>Příkazy command prompt (cmd)</h4>
+                <ul>
+                    <li>cd .. : přesun do adresáře o level výše</li>
+                    <li>dir : vypíše všechny položky v aktuálním adresáři</li>
+                    <li>D: : změna disku na disk D</li>
+                    <li>
+                        cd &lt;relativní cesta&gt; : <br />
+                        změna adresáře.
+                    </li>
+                    <li>
+                        cd &lt;absolutní cesta&gt; : <br />
+                        změna adresáře.
+                    </li>
+                    <li>cd / : návrat do kořenového adresáře C:\&gt;</li>
+                    <li>cls : clear screen</li>
+                    <li>
+                        mkdir : vytvoří nový adresář <br />
+                        <strong>Příklad.</strong> mkdir novy : vytvoří nový podadresář s
+                        názvem "novy" v aktuálním adresáři.
+                    </li>
+                    <li>
+                        rmdir : vymaže adresář v aktuálním adresáři
+                        <br />
+                        <strong>Příklad.</strong>
+                        rmdir nazev-adresare <br />
+                        vymaže adresář s názvem "nazev-adresare".
+                    </li>
+                    <li>
+                        echo : vytvoří nový soubor v aktuálním adresáři. <br />
+                        <strong>Příklad.</strong>
+                        echo our first file > test.txt : vytvoří v aktuálním adresáři nový
+                        soubor s názvem test.txt a obsahující text "our first file"
+                    </li>
+                    <li>
+                        type : zobrazí obsah souboru. <br />
+                        <strong>Příklad.</strong> Type test.txt : zobrazí obsah tohoto
+                        souboru, tj, text "our first file"
+                    </li>
+                    <li>
+                        del : vymaže soubor v aktuálním adresáři. <br />
+                        <strong>Příklad.</strong>
+                        del test.txt : vymaže se soubor test.txt v aktuálním adresáři
+                    </li>
+                </ul>
+                <h4>Příkazy pro použití gitu z příkazové řádky</h4>
+                <ul>
+                    <li>
+                        git init : Create an empty Git repository or reinitialize an
+                        existing one
+                    </li>
+                    <li>
+                        git-status : Show the working tree status, <br />
+                        Displays paths that have differences between the index file and
+                        the current HEAD commit, paths that have differences between the
+                        working tree and the index file, and paths in the working tree
+                        that are not tracked by Git (and are not ignored by gitignore[5]).
+                        The first are what you would commit by running git commit; the
+                        second and third are what you could commit by running git add
+                        before running git commit.
+                    </li>
+                    <li>
+                        git add . : Add file contents to the index (všechno se přidá do
+                        staged area)
+                    </li>
+                    <li>
+                        git commit -m "added file" :
+                        <br />
+                        uloží změny do repozitáře.
+                    </li>
+                    <li>
+                        git config --global --edit : zobrazí jméno uživatele a email (a
+                        možná umožňuje tyto osobní údaje přepsat přímo v editoru VSC)
+                    </li>
+                    <li>
+                        git config --global user.name : zobrazí jméno "majitele"
+                        <br />
+                        git config --global user.name "Dušan Bednařík"
+                        <br />
+                        git config --global user.email "dusanbednarik@gmail.com" : <br />
+                        nastaví v počítači jméno a email uživatele.
+
+                    </li>
+                    <li>git config --global user.email : zobrazí email "majitele"</li>
+                    <li>git branch : List, create, or delete branches</li>
+                    <li>
+                        git branch -m main : příkazem přejmenujeme master branch na main
+                        branch
+                    </li>
+                    <li>
+                        git checkout -b feature : založí branch s názvem "feature" a
+                        přepne se do této větve feature
+                    </li>
+                    <li>
+                        git merge second-feature : vnoří commity z větve "second-feature"
+                        do hlavní větve "main".
+                    </li>
+                    <li>git log : Show commit logs</li>
+                    <li>
+                        Vymazání souborů v pracovním adresáři (a které už jsme před tím
+                        "commitli") můžeme provést těmito způsoby:
+                        <ol>
+                            <li>
+                                Vymažeme přímo bez použití gitu. Je potom zapotřebí přidat
+                                tuto změnu do staged area pomocí příkazu git add . a pak to
+                                ještě commitnout.
+                            </li>
+                            <li>
+                                git rm file2.txt: Vymaže se soubor file2.txt v aktuální větvi.
+                                Je také zapotřebí, abychom se nacházel v adresáři, kde je
+                                uložen soubor file2.txt. To se například stane, když budeme
+                                mazat soubor v nějakém podadresáři. Pak se tyto změny projeví
+                                ve staging area a poté je možné tyto změny commitnout a
+                                definitivně vymazat dané soubory.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        git reset --hard HEAD~1 : vracíme se jeden commit zpět. Inovuje se
+                        jak index, tak path.
+                    </li>
+                    <li>
+                        git branch -D feature : vymaže se větev (branch) s názvem
+                        "feature". (Asi bychom měli před tím přepnout do jiné větve než
+                        kterou chceme smazat.)
+                    </li>
+                    <li>
+                        git checkout -- . : tímto způsobem smažeme resetujeme poslední
+                        změny, které jsme zatím nepřidali do staged area a přejdeme k
+                        poslednímu stavu, který odpovídá poslednímu commitu v aktuaálním
+                        branchi.
+                    </li>
+                    <li>
+                        git reset file1.txt : tímto příkazem vratíme poslední verzi
+                        souboru file1.txt ze staged area do unstaged area. (Tedy pokud
+                        jsme již změny předali do staged area příkazem git add .) Potém
+                        můžeme přejít k posledním commitu pomocí příkazu: git checkout --
+                        . nebo více specificky příkazem: git checkout -- file1.txt
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Github</h3>
+                <ul>
+                    <li>
+                        <strong>
+                            git remote add origin
+                            https://github.com/jmeno/learning-web-dev.git
+                        </strong>
+                        : vytvoří propojení mezi lokálním repozitářem v gitu a vzdáleném
+                        (remote) repozitářem na githubu s uvedenou url adresou. Dále bude
+                        jméno
+                        <em>origin</em>
+                        zatupovat uvedenou url adresu.
+                    </li>
+                    <li>
+                        Přidání nového vzdáleného serveru, který se jmenuje například github místo origin
+                        (který již zřejmě v systému existuje), proveďte následující:
+                        <strong>
+                            git remote add github
+                            https://github.com/jmeno/learning-web-dev.git
+                        </strong>
+                        Nezapomeňte, že všude, kde v návodu vidíte slovo "origin".
+                        nahradit slovem "github". Například git push origin
+                        master by nyní mělo být git push github master. Pokud však chcete
+                        zjistit, co je to origin, který již existuje, můžete provést příkaz
+                        <strong> git remote -v </strong>. Pokud si myslíte, že je tam
+                        nějaká chyba, můžete aktualizovat:
+                        <strong>
+                            git remote set-url origin
+                            https://github.com/jmeno/learning-web-dev.git
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>git push -u origin main</strong> : zkopíruje obsah
+                        lokálního repozitáře do vzdáleného (remote) repozitáře main.
+                    </li>
+                    <li>
+                        <strong>git clone &lt;url repozitáře&gt; .</strong> : skopíruje
+                        obsah vzdáleného repozitáře do aktuálního lokálního adresáře. není
+                        ani potřeba inicializovat příkazem git init lokální git repozitář
+                        neboť naklonujeme celý vzdálený repozitář včetně celé struktury
+                        repozitáře.
+                    </li>
+                    <li>
+                        <strong>git pull</strong> : stáhne aktuální stav vzdáleného
+                        repozitáře do lokálního repozitáře.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+</body>
+
+</html>

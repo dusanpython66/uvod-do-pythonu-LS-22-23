@@ -66,7 +66,7 @@ len("Ahoj bcbcbcbcbcbcbcbcbcbcbcb") # funkce "len" nám vrátí počet znaků ř
 
 
 # Slicing řetězců:
-"Ahoj"[1:3]
+"Ahoj"[1:3]  # výsledkem je řetězec "ho", indexování začíná od nuly
 "Ahoj"[1:-1]
 "Ahoj"[:-1]
 "Ahoj"[1:]
@@ -83,6 +83,6 @@ type(555)
 type(3.14)
 type("řetězec")
 type(True)
-type(1 < 2)
+type(1 < 2)    # výsledkem je boolovská hodnota, 1 < 2 je logický výraz a má hodnotu True
 type((1 <= -1) or (1 == 2))
 

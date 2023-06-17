@@ -33,7 +33,7 @@ print("Konec programu")
 
 N = 100
 
-soucet = 0 # výchozí hodnota součtu
+soucet = 0  # výchozí hodnota součtu
 
 for n in range(1, N + 1):
     soucet = soucet + n
@@ -48,13 +48,13 @@ s = 0
 n = 1
 while n <= N:
     s = s + n
-    n += 1 # n = n + 1
+    n += 1  # n = n + 1
 print("Součet je roven číslu: ", s)
 
 # vyjímky try-except
-try:
+try:   # pokusíme se provést následující kód
     x = 5 / 0
-except ZeroDivisionError:
+except ZeroDivisionError:  # pokud se vyskytne chyba, provede se následující kód
     print("Chyba: Dělení nulou není možné.")
 
 x = int(input("Zadej číslo: "))
@@ -83,10 +83,10 @@ print("Pro ukončení programu stiskni klávesu 'q' ")
 while True:
     prvni_cislo = input("Dělenec  = ")
     if prvni_cislo == 'q':
-        break
+        break  # ukončí cyklus while
     druhe_cislo = input("Dělitel = ")
     if druhe_cislo == 'q':
-        break
+        break  # ukončí cyklus while
     try:  # pokusíme se provést následující kód
         vysledek = int(prvni_cislo) / int(druhe_cislo)
     except ZeroDivisionError:
@@ -95,11 +95,10 @@ while True:
         print(vysledek)
 
 
-
 # další příklad na použití cyklu while
 # výpočet faktoriálu čísla n
-n = int(input("Zadej číslo: ")) # vyžádáme si od uživatele vstup
-faktorial = 1 # výchozí hodnota faktoriálu
+n = int(input("Zadej číslo: "))  # vyžádáme si od uživatele vstup
+faktorial = 1  # výchozí hodnota faktoriálu
 while n > 1:
     faktorial = faktorial * n
     n = n - 1
@@ -107,13 +106,13 @@ print("Faktoriál je roven: ", faktorial)
 
 # další příklad na použití cyklu while
 # výpočet faktoriálu čísla n
-faktorial = 1 # výchozí hodnota faktoriálu
+faktorial = 1  # výchozí hodnota faktoriálu
 
 # vytvořme dva do sebe vnořené cykly for
 for i in range(1, 11):
     for j in range(1, 11):
         print(i, "x", j, "=", i * j)
-    print("") # vytiskne prázdný řádek
+    print("")  # vytiskne prázdný řádek
 
 # vytvořme dva do sebe vnořené cykly while
 while True:
@@ -128,4 +127,19 @@ while True:
         faktorial = faktorial * i
         i += 1
     print("Faktoriál čísla", n, "je roven", faktorial)
-    print("") # vytiskne prázdný řádek
+    print("")  # vytiskne prázdný řádek
+
+# další příklad na použití cyklu while
+
+i = 0
+
+while i < 10:
+    i += 1
+    if i == 5:
+        continue
+    print(i)
+
+# V tomto kódu se cyklus while opakuje, dokud i není rovno 10. 
+# Pokud je i rovno 5, klíčové slovo continue způsobí, že 
+# se zbytek cyklu přeskočí a pokračuje se dalším průchodem cyklu. 
+# To znamená, že číslo 5 se nevypíše.

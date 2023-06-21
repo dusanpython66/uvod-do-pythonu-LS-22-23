@@ -86,3 +86,9 @@ type(True)
 type(1 < 2)    # výsledkem je boolovská hodnota, 1 < 2 je logický výraz a má hodnotu True
 type((1 <= -1) or (1 == 2))
 
+
+"Ahoj"[0] = "B"  # řetězce jsou neměnitelné
+
+# dostaneme chybu:
+# TypeError: 'str' object does not support item assignment
+

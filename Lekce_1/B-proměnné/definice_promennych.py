@@ -1,6 +1,14 @@
 # Vytváření proměnných
-jmeno = "Ahoj"
+jmeno = "Petr"
 print(jmeno)
+
+# obsah proměnné lze později změnit
+jmeno = "Pavel"
+print(jmeno)
+
+# použití proměnné lze zkrátit příkazy
+print(jmeno + " je programátor.")
+
 
 # delka odvěsny a
 a = input("Zadej délku odvěsny a: ")
@@ -29,6 +37,22 @@ print(jmenaStudentuUniversity)
 jmeno = "Petr"
 prijmeni = "Novák"
 print(f"Vítej {jmeno} {prijmeni} v naší aplikaci.")
+
+# switching values of variables
+a = 1
+b = 2
+print(a, b)
+a, b = b, a
+print(a, b)
+
+# switching variables using third variable
+a = 1
+b = 2
+print(a, b)
+c = a
+a = b
+b = c
+print(a, b)
 
 
 

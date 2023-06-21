@@ -6,7 +6,7 @@ prijmeni = "novák"
 # print(f"Pan {jmeno} {prijmeni}")
 
 # formátování řetězce pomocí metody format()
-# {} tvoří placeholder
+# {} tvoří tzv. "placeholder" - místo, kam se vloží hodnota
 print("Pan {} {}".format(jmeno, prijmeni))
 
 jmeno = input("Napiš svoje jméno: ")

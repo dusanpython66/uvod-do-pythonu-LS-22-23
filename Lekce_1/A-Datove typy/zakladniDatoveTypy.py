@@ -87,7 +87,7 @@ type(1 < 2)    # výsledkem je boolovská hodnota, 1 < 2 je logický výraz a m�
 type((1 <= -1) or (1 == 2))
 
 
-"Ahoj"[0] = "B"  # řetězce jsou neměnitelné
+# "ahoj"[0] = "B"
 
 # dostaneme chybu:
 # TypeError: 'str' object does not support item assignment

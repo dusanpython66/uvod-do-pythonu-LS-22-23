@@ -1,11 +1,19 @@
 # Řídící konstrukce
 
+# Ukázku tzv. "vývojoového diagramu" najdete na odkazu:
+# https://cs.wikipedia.org/wiki/V%C3%BDvojov%C3%BD_diagram
+
+# program pro kreslení vývojových diagramů najdete např. na odkazu:
+# https://www.draw.io/
+
+# o absolutní hodnotě viz odkaz: https://cs.wikipedia.org/wiki/Absolutn%C3%AD_hodnota
 # if-elif-else konstrukce:
 x = float(input("zadejte reálné číslo x = "))
 if x >= 0:
     print("|x| = ", x)
 else:
     print("|x| = ", - x)
+
 
 skore = int(input("Zadej výsledek testu: "))
 

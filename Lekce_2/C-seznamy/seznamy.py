@@ -1,12 +1,21 @@
 # Jak se vytvoří seznam?
 seznam1 = [1, 2, 3, 4, 5] # vytvoříme seznam s několika prvky
-nakup = [] # vytvoříme prázdný seznam
+print(seznam1)
+
 
 # jak získáme prvek seznamu?
 # první prvek seznamu má index 0
 #print(seznam1[0]) # vytiskne , index se zadává do hranatých závorek
 #print(seznam1[4]) # vytiskne 5, index se zadává do hranatých závorek
 #print(seznam1[-2]) # vytiskne 5, index se zadává do hranatých závorek
+
+print(seznam1[0]) # vytiskne 1, index se zadává do hranatých závorek
+print(seznam1[4]) # vytiskne 5, index se zadává do hranatých závorek
+print(seznam1[-2]) # vytiskne 4, index se zadává do hranatých závorek
+
+
+nakup = [] # vytvoříme prázdný seznam
+print(nakup)
 
 # přidávejme postupně prvky do seznamu
 nakup.append("jablko")

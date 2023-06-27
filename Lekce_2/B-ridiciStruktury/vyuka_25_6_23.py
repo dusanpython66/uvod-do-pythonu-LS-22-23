@@ -88,6 +88,7 @@
 
 # do vnořené podmínky if-else
 vek = int(input("Zadej svůj věk: "))
+cena = 0
 if vek < 4:
     cena = 0
 else:

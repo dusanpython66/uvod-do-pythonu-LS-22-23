@@ -57,7 +57,7 @@ print(nakup3)
 print(type(nakup3))
 
 # metoda split - rozdělí řetězec na seznam
-nakup4 = "chleba,máslo,vejce"
+nakup4 = "chleba,máslo,vejce, mléko"
 nakup5 = nakup4.split(",")  
 print(nakup5)
 

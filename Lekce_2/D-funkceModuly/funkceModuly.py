@@ -2,17 +2,20 @@
 
 # prvni funkce: prázdná funkce (bez parametrů)
 
-# def pozdrav():
-#     jmeno = "karel"
-#     prijmeni = "novák"
-#     print(f"Pan {jmeno} {prijmeni}")
+def pozdrav():
+    jmeno = "karel"
+    prijmeni = "novák"
+    print(f"Pan {jmeno} {prijmeni}")  # f-string (formátovaný řetězec)
 
-# def pozdrav(jmeno, prijmeni):
-#     print(f"Pan/Paní {jmeno} {prijmeni}")
+# nyní zavoláme funkci pozdrav()
+pozdrav()
 
-# pozdrav(prijmeni="Kolář", jmeno = "Petr")
+def pozdrav(jmeno, prijmeni):
+    print(f"Pan/Paní {jmeno} {prijmeni}")
 
-print("Karel Novák", "Petr Kolář", sep="    ")
+pozdrav(prijmeni="Kolář", jmeno = "Petr")
+
+print("Karel Novák", "Petr Kolář", sep="     ")  # sep je parametr funkce print (oddělovač) - defaultně je mezera
 
 # defaultní hodnoty parametrů
 def pozdrav(jmeno="Karel", prijmeni="Novák"):
@@ -43,6 +46,9 @@ delkaPrepony = prepona(3, 4) # uložíme si hodnotu proměnné c do proměnné d
 print(delkaPrepony)
 
 # externí moduly
+# Vyzkoušejme si importovat modul Sympy, který obsahuje funkce pro symbolické výpočty.
+# V rámci následujícího příkladu si vyzkoušíme spočítat derivaci funkce sin(x) pomocí funkce diff().
+# Více o modulu Sympy se můžete dočíst v dokumentaci. https://docs.sympy.org/latest/index.html
 
 import sympy as sym
 sym.sin(sym.pi)
@@ -53,14 +59,11 @@ print(sym.diff(f, x))
 
 #######  externí moduly vytvořené uživatelem
 
-from newModul import prepona  # import uživatelského modulu umístěného v kořenovém adresáři projektu
-c = prepona(3,5)
-print(c)
-
 # import  uživatelského modulu umístěného v podadresáři projektu ./Lekce_2
 import sys
-sys.path.append('./Lekce_2')
-from mujModul import delkaPrepony
+
+sys.path.append('./Lekce_2/D-funkceModuly')
+from mujModul import delkaPrepony  # import uživatelského modulu
 
 # volání funkce z uživatelského modulu:
 c = delkaPrepony(3,20)

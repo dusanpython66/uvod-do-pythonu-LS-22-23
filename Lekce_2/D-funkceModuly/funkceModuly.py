@@ -7,7 +7,7 @@ def pozdrav():
     prijmeni = "novák"
     print(f"Pan {jmeno} {prijmeni}")  # f-string (formátovaný řetězec)
 
-# nyní zavoláme funkci pozdrav()
+# Nyní zavoláme funkci pozdrav()
 pozdrav()
 
 def pozdrav(jmeno, prijmeni):

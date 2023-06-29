@@ -23,9 +23,6 @@ def pozdrav(jmeno="Karel", prijmeni="Novák"):
 
 pozdrav()
 
-
-
-
 # funkce s parametry
 
 def prepona(a, b):
@@ -43,7 +40,9 @@ def prepona(a, b):
 delkaPrepony = prepona(3, 4) # uložíme si hodnotu proměnné c do proměnné delkaPrepony
 
 # print(prepona(3, 4) * 2)
-print(delkaPrepony)
+print("Délka přepony je rovna: ", delkaPrepony)
+# Totéž pomocí f-stringu:
+print(f"Délka přepony je rovna: {delkaPrepony}")
 
 # externí moduly
 # Vyzkoušejme si importovat modul Sympy, který obsahuje funkce pro symbolické výpočty.
@@ -72,6 +71,17 @@ print(c)
 print(1 / 0)
 
 # handling exceptions  (zachytávání výjimek)
+# Syntaxe:
+# try:
+#     <kód>
+# except <výjimka>:
+#     <kód>
+# else:
+#     <kód>
+# finally:   # nepovinný blok  (vykoná se vždy)
+#     <kód>
+
+
 def prepona(a, b):
     try: # pokusí se provést následující kód
         c = (a**2 + b**2)**(1/2)
@@ -80,13 +90,13 @@ def prepona(a, b):
     else:  # pokud nedošlo k vyvolání výjimky
         return c
 prepona(4, 3)
-# sami si vytvoříme výjimku ...
 
 
 # Collatzova posloupnost  (https://en.wikipedia.org/wiki/Collatz_conjecture)
 # 1. Pokud je číslo sudé, vydělíme jej dvěma
 # 2. Pokud je číslo liché, vynásobíme jej třemi a přičteme jedna
 # 3. Opakujeme dokud nedostaneme číslo 1
+# Více o Collatzově posloupnosti se můžete dočíst na Wikipedii. https://en.wikipedia.org/wiki/Collatz_conjecture
 
 def collatz(number):
     if number % 2 == 0:
@@ -96,11 +106,22 @@ def collatz(number):
 
 n = int(input("Zadej číslo: "))
 while n != 1:
-    n = collatz(n)
+    n = collatz(n)  # přiřazení výsledku funkce collatz() do proměnné n
     print(n)
 
+# Předávání libovolného počtu parametrů do funkce
+# Syntaxe:
+# def <název_funkce>(<parametry>, *args, **kwargs):
+#     <kód>
 
+# *args - předává libovolný počet parametrů do funkce ve formě n-tice
+# **kwargs - předává libovolný počet pojmenovaných parametrů do funkce ve formě slovníku
 
+def udelej_pizzu(*ingredience):
+    print("Ingredience: ", ingredience)
+
+# volání funkce udelej_pizzu()
+udelej_pizzu("sýr", "šunka", "rajče", "houby")
 
 
 

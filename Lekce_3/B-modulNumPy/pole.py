@@ -30,3 +30,4 @@ print(determinant)
 inverzni_matice = np.linalg.inv(matice1)
 print(inverzni_matice)
 
+

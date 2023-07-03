@@ -61,7 +61,7 @@ print(sym.diff(f, x))
 # import  uživatelského modulu umístěného v podadresáři projektu ./Lekce_2
 import sys
 
-sys.path.append('./Lekce_2/D-funkceModuly')
+sys.path.append('./Lekce_2/A-funkceModuly')
 from mujModul import delkaPrepony  # import uživatelského modulu
 
 # volání funkce z uživatelského modulu:
@@ -124,6 +124,25 @@ def udelej_pizzu(*ingredience):
 udelej_pizzu("sýr", "šunka", "rajče", "houby")
 
 
+# Uveďme příklad funkce, která kombinuje poziční argumenty
+# a dále umožňuje předávat libovolný počet parametrů.
 
 
+def udelej_pizzu(velikost, *ingredience):
+    print("Velikost: ", velikost)
+    print("Ingredience: ", ingredience)
 
+udelej_pizzu("velká", "sýr", "šunka", "rajče", "houby")
+
+
+# **kwargs - předává libovolný počet pojmenovaných parametrů do funkce ve formě slovníku
+
+def udelej_pizzu(velikost, *ingredience, **dalsi_ingredience):
+    print("Velikost: ", velikost)
+    print("Ingredience: ", ingredience)
+    print("Další ingredience: ", dalsi_ingredience)
+
+
+udelej_pizzu("velká",
+             "sýr", "šunka", "rajče", "houby",
+             extra_syr=True, extra_sunka=True)

@@ -143,7 +143,7 @@ print(f"Cena vstupenky je {cena} Kč")
 #     příkaz1
 #     příkaz2
 #     ...
-#     příkazN
+#     příkazk
 
 # proměnná rozsah může být např.:
 # 1) rozsah celých čísel od 0 do N-1: range(N)
@@ -163,6 +163,11 @@ for n in range(1, N + 1):
     soucet = soucet + n
     print("Částečná suma je rovna: ", soucet)
 print("součet je roven = ", soucet)
+
+print(range(1, 11))  # vytiskne rozsah od 1 do 10
+# příklad na požití cyklu "for"
+for i in range(-1, 12, 3):
+    print(i)
 
 
 # vytvořme dva do sebe vnořené cykly for
@@ -192,21 +197,11 @@ s = 0
 n = 1
 while n <= N:
     s = s + n
-    n += 1  # n = n + 1
+    print("Částečná suma je rovna: ", s)    # vytiskne částečný součet
+    n += 1  # n = n + 1 , += je zkrácený zápis je to operátor inkrementace
+    print("n = ", n)
 print("Součet je roven číslu: ", s)
 
-# vyjímky try-except
-# syntaxe:
-# try:
-#     příkaz1
-#     příkaz2
-#     ...
-#     příkazN
-# except typ_chyby:
-#     příkaz1
-#     příkaz2
-#     ...
-#     příkazN
 
 # Příklad na použití cyklu while:
 
@@ -227,15 +222,28 @@ while True:
 # Příklad cyklu while kde uživatel rozhoduje, kdy chce ukončit program:
 
 promt = "Napiš něco a já to zopakuji. "
-promt += "Pro ukončení programu napiš 'quit': "
+promt += "\nPro ukončení programu napiš 'quit': "
 
 message = ""
 while message != 'quit':
-    message = input(promt)
+    message = input(promt)  # uloží obsah proměnné promt do proměnné message
 
     if message != 'quit':
         print(message)
 
+
+# vyjímky try-except
+# syntaxe:
+# try:
+#     příkaz1
+#     příkaz2
+#     ...
+#     příkazN
+# except typ_chyby:
+#     příkaz1
+#     příkaz2
+#     ...
+#     příkazN
 
 # příklad na použití try-except
 # v tomto příkladě se pokusíme vydělit číslo 5 nulou
@@ -269,7 +277,7 @@ while True:
         vysledek = int(prvni_cislo) / int(druhe_cislo)
     except ZeroDivisionError:
         print("Nulou dělit nelze!")
-    else:
+    else:  # pokud se nevznikne žádná chyba, provede se následující kód:
         print(vysledek)
 
 

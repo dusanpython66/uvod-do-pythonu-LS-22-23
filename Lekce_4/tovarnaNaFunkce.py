@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Popis: Továrna na funkce (function factory) je funkce, která vytváří funkce.
 # funkce tvořené jinou funkcí dynamicky jsou tzv. uzávěry (closures)
 
@@ -18,20 +5,6 @@ def tovarna_na_funkce(x):
     def uzaver(y):
         return x + y
     return uzaver
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Vytvoříme uzávěru s hodnotou x = 10

@@ -86,7 +86,7 @@ elif vek < 18:
     cena = 25
 elif vek < 65:
     cena = 40
-elif vek >= 65:   # tento poslední blok elif zachytí všechny věkové kategorie, které nejsou výše uvedeny!
+elif vek >= 65:  # tento poslední blok elif zachytí všechny věkové kategorie, které nejsou výše uvedeny!
     cena = 20
 print(f"cena vstupenky je {cena} Kč")  # f-string
 
@@ -132,7 +132,6 @@ else:
 
 print(f"Cena vstupenky je {cena} Kč")
 
-
 ########## cykly while a for ####################
 
 ############# cyklus for ####################
@@ -146,9 +145,9 @@ print(f"Cena vstupenky je {cena} Kč")
 #     příkazk
 
 # proměnná rozsah může být např.:
-# 1) rozsah celých čísel od 0 do N-1: range(N)
-# 2) rozsah celých čísel od M do N-1: range(M, N)
-# 3) rozsah celých čísel od M do N-1 s krokem K: range(M, N, K)
+# 1) rozsah celých čísel od 0 do pocetZapalek-1: range(pocetZapalek)
+# 2) rozsah celých čísel od M do pocetZapalek-1: range(M, pocetZapalek)
+# 3) rozsah celých čísel od M do pocetZapalek-1 s krokem K: range(M, pocetZapalek, K)
 
 
 # příklad na požití cyklu "for"
@@ -169,14 +168,11 @@ print(range(1, 11))  # vytiskne rozsah od 1 do 10
 for i in range(-1, 12, 3):
     print(i)
 
-
 # vytvořme dva do sebe vnořené cykly for
 for i in range(1, 11):
     for j in range(1, 11):
         print(i, "x", j, "=", i * j)
     print("")  # vytiskne prázdný řádek
-
-
 
 ########## cyklus while ####################
 
@@ -197,11 +193,10 @@ s = 0
 n = 1
 while n <= N:
     s = s + n
-    print("Částečná suma je rovna: ", s)    # vytiskne částečný součet
+    print("Částečná suma je rovna: ", s)  # vytiskne částečný součet
     n += 1  # n = n + 1 , += je zkrácený zápis je to operátor inkrementace
     print("n = ", n)
 print("Součet je roven číslu: ", s)
-
 
 # Příklad na použití cyklu while:
 
@@ -214,10 +209,9 @@ while True:
         break  # ukončí cyklus while
     druhe_cislo = input("Dělitel = ")
     if druhe_cislo == 'q':
-        break   # ukončí cyklus while
+        break  # ukončí cyklus while
     vysledek = int(prvni_cislo) / int(druhe_cislo)
     print(vysledek)
-
 
 # Příklad cyklu while kde uživatel rozhoduje, kdy chce ukončit program:
 
@@ -230,7 +224,6 @@ while message != 'quit':
 
     if message != 'quit':
         print(message)
-
 
 # vyjímky try-except
 # syntaxe:
@@ -247,7 +240,7 @@ while message != 'quit':
 
 # příklad na použití try-except
 # v tomto příkladě se pokusíme vydělit číslo 5 nulou
-try:   # pokusíme se provést následující kód
+try:  # pokusíme se provést následující kód
     x = 5 / 0
 except ZeroDivisionError:  # pokud se vyskytne chyba, provede se následující kód
     print("Chyba: Dělení nulou není možné.")
@@ -262,6 +255,8 @@ except ValueError:
     print("Chyba: Zadán neplatný vstup. Zadej prosím číslo.")
 
 # příklad na použití try-except
+# program si bude žádat o zadání dvou čísel a vypíše jejich podíl
+# pokud se vyskytne chyba, vypíše se chybová hláška
 
 print("Zadej dvě čísla a obdržíš jejich podíl")
 print("Pro ukončení programu stiskni klávesu 'q' ")
@@ -280,14 +275,15 @@ while True:
     else:  # pokud se nevznikne žádná chyba, provede se následující kód:
         print(vysledek)
 
-
 # další příklad na použití cyklu while
-# výpočet faktoriálu čísla n
+# výpočet faktoriálu čísla n, kde n je zadané číslo od uživatele
+# n! = 1 * 2 * 3 * ... * n
+
 n = int(input("Zadej číslo: "))  # vyžádáme si od uživatele vstup
 faktorial = 1  # výchozí hodnota faktoriálu
 while n > 1:
     faktorial = faktorial * n
-    n = n - 1
+    n -= 1  # n = n - 1 , -= je zkrácený zápis pro operátor dekrementace
 print("Faktoriál je roven: ", faktorial)
 
 # další příklad na použití cyklu while
@@ -317,10 +313,48 @@ i = 0
 while i < 10:
     i += 1
     if i == 5:
-        continue
+        print("Číslo 5 se nevypíše.")
+        continue   # pokračuje se dalším průchodem cyklu !!!
     print(i)
 
 # V tomto kódu se cyklus while opakuje, dokud i není rovno 10.
 # Pokud je i rovno 5, klíčové slovo continue způsobí, že
 # se zbytek cyklu přeskočí a pokračuje se dalším průchodem cyklu.
 # To znamená, že číslo 5 se nevypíše.
+
+# ukažme jak funguje klíčové slovo finally
+# finally se používá vždy společně s try-except
+# finally se používá pro uvolnění zdrojů, které jsme používali v try-except
+# finally se vždy provede, ať už se v try-except vyskytla chyba nebo ne
+
+try:
+    x = int(input("Zadej číslo: "))
+except ValueError:
+    print("Chyba: Zadán neplatný vstup. Zadej prosím číslo.")
+
+else:
+    print("Výsledek je: ", x)
+
+finally:
+    print("finally se provede vždy, ať už se v try-except vyskytla chyba nebo ne")
+
+# ukažme konstrukci try-except-else-finally uvnitř cyklu while
+
+print("Zadej dvě čísla a obdržíš jejich podíl")
+print("Pro ukončení programu stiskni klávesu 'q' ")
+
+while True:
+    prvni_cislo = input("Dělenec  = ")
+    if prvni_cislo == 'q':
+        break  # ukončí cyklus while
+    druhe_cislo = input("Dělitel = ")
+    if druhe_cislo == 'q':
+        break  # ukončí cyklus while
+    try:  # pokusíme se provést následující kód
+        vysledek = int(prvni_cislo) / int(druhe_cislo)
+    except ZeroDivisionError:
+        print("Nulou dělit nelze!")
+    else:  # pokud se nevznikne žádná chyba, provede se následující kód:
+        print("podíl je roven číslu: ", vysledek)
+    finally:
+        print("finally se provede vždy, ať už se v try-except vyskytla chyba nebo ne")

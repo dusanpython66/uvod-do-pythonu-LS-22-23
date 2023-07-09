@@ -1,12 +1,4 @@
-from time import time, sleep
-
-
-
-
-
-
-
-
+from time import sleep, time  # importujeme funkce time a sleep z modulu time
 
 
 def f():
@@ -18,15 +10,23 @@ def g():
 
 
 t = time()  # zjistíme aktuální čas
+
 f()  # zavoláme funkci f
-print("f took", time() - t)  # zjistíme, kolik času trvalo zavolání funkce f
+print("f zavolání trvalo: ", time() - t, "sekundy")  # zjistíme, kolik času trvalo zavolání funkce f
 
+t = time()  # zjistíme aktuální čas
 
+g()  # zavoláme funkci g
+print("g zavolání trvalo: ", time() - t, "sekundy")  # zjistíme, kolik času trvalo zavolání funkce g
 
+# výše uvedený kód lze zjednodušit pomocí dekorátorů:
 
-
-
-
+def mira(funkce):
+    cas = time()
+    funkce()
+    print(funkce.__name__, "zavolání trvalo: ", time() - cas, "sekundy")
+    # funkce.__name__ je jméno funkce  (funkce je objekt, který má atribut __name__)
+mira(f)
 
 
 # dekorátor je funkce, která přijímá funkci jako argument a vrací funkci
@@ -35,13 +35,15 @@ print("f took", time() - t)  # zjistíme, kolik času trvalo zavolání funkce f
 # ukažme si jednoduchý dekorátor
 
 # dekorátor
+
+
 def dekorator(funkce):
-    def vnitrek():
+    def wrapper():
         print("Začátek funkce")
         funkce()
         print("Konec funkce")
 
-    return vnitrek  # vracíme funkci vnitrek
+    return wrapper  # vracíme funkci wrapper
 
 
 
@@ -54,11 +56,15 @@ def dekorovana_funkce():
 # zavolejme dekorovanou funkci
 dekorovana_funkce()
 
+# Tedy funkce dekorovana_funkce() byla "obalena" funkcí wrapper(),
+# což je typické chování dekorátorů. Dekorátor je v podstatě funkce, která
+# "obaluje" jinou funkci a může tak ovlivňovat její chování.
+
 
 ########### syntaxe bez použití znaku @ ###########
 
 # importujme funkce sleep a time z modulu time
-from time import sleep, time
+# from time import sleep, time
 
 # napišme definici dekorované funkce
 def f(sleep_time=0.1):
@@ -88,7 +94,7 @@ print("f.__name__:", f.__name__)  # vypíše se wrapper!
 ########### jeden dekorátor ###########
 
 # importujme funkce sleep a time z modulu time
-from time import sleep, time
+# from time import sleep, time
 
 
 # dekorujeme funkci f
@@ -117,7 +123,7 @@ print("f.__name__:", f.__name__)  # vypíše se wrapper!
 ########### více dekorátorů ###########
 
 # importujme funkce sleep a time z modulu time
-from time import sleep, time
+# from time import sleep, time
 
 # napišme definice dekorátorů
 def dekorator1(funkce):

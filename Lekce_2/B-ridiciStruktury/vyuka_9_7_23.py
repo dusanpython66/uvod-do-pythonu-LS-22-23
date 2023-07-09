@@ -14,19 +14,19 @@ while True:
     vysledek = float(delenec) / float(delitel)
     print(vysledek)
 
-    # try-except
-    # syntaxe:
-    # try:
-    příkaz1
-    příkaz2
-    příkaz3
-    ...
-except < typ
-chyby >:
-příkaz1
-příkaz2
-příkaz3
-...
+# try-except
+# syntaxe:
+# try:
+#     příkaz1
+#     příkaz2
+#     příkaz3
+#     ...
+# except < typ
+#    chyby >:
+#    příkaz1
+#    příkaz2
+#    příkaz3
+#    ...
 
 try:
     x = 5 / 0
@@ -46,7 +46,7 @@ while True:
         vysledek = float(delenec) / float(delitel)
         print(vysledek)
     except ZeroDivisionError:
-    print("Nulou dělit nelze!")
+        print("Nulou dělit nelze!")
 
 # Konstrukce try-except-else-finally
 

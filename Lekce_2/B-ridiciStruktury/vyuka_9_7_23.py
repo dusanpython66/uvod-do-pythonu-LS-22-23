@@ -21,8 +21,7 @@ while True:
 #     příkaz2
 #     příkaz3
 #     ...
-# except < typ
-#    chyby >:
+# except < typ chyby >:
 #    příkaz1
 #    příkaz2
 #    příkaz3

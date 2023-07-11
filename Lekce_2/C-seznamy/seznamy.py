@@ -17,7 +17,7 @@ nakup = [] # vytvoříme prázdný seznam
 print(nakup)
 
 # přidávejme postupně prvky do seznamu
-nakup.append("jablko")
+nakup.append("jablko")  # metoda append přidává prvek na konec seznamu
 nakup.append("hruska")
 nakup.append("banan")
 print(nakup)

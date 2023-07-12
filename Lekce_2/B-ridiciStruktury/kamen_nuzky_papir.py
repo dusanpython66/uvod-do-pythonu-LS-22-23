@@ -11,7 +11,7 @@ pocetVitezstviHrace = 0
 pocetVitezstviPocitace = 0
 
 while True:
-    # Zadej tah
+    # Zadej tah hráče
 
     try:
         tah = input("Zadej svůj tah, 'k' = kámen, 'n' = nůžky a 'p' = papír, 'q' = exit: ")
